@@ -1,0 +1,21 @@
+{
+    "baseUrl":"https://www.google.com",
+    "retries":2,
+    "watchForFileChanges":false,
+    "viewportHeight":768,
+    "viewportWidth":1366,
+    
+    "env":{
+        "lang": "PL"
+    },
+
+
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "isoDateTime",
+        "overwrite": false,
+        "html": true,
+        "json": true
+  }
+}

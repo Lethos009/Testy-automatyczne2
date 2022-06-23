@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-23T15:56:43.463Z",
+    "end": "2022-06-23T15:58:39.974Z",
+    "duration": 116511,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "724bcd4d-a561-4c54-b981-713ec71272ce",
+      "title": "",
+      "fullFile": "cypress/integration/Testy-automatyczne-zaliczenie/Testy/Testy_cz2_olx.spec.js",
+      "file": "cypress/integration/Testy-automatyczne-zaliczenie/Testy/Testy_cz2_olx.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2c8e2dce-5461-4c32-9d11-e3bcc50a2d93",
+          "title": "Testy automatyczne II - projekt na zaliczenie - Arkadiusz Grygoruk, podyplomowe - Tester oprogramowania 2021/2022",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "8eb4434b-42cc-4a04-9740-1f7504ef50c2",
+              "title": "Website tests - OLX",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Test 1 - Search for a car in specified location through searchbar",
+                  "fullTitle": "Testy automatyczne II - projekt na zaliczenie - Arkadiusz Grygoruk, podyplomowe - Tester oprogramowania 2021/2022 Website tests - OLX Test 1 - Search for a car in specified location through searchbar",
+                  "timedOut": null,
+                  "duration": 17519,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "olx.disableUncaughtException();\ncy.get('[data-cy=\"homepage_input_textsearch\"]').type(_querriesZaliczenieGrygoruk.default[1].input1);\ncy.get('[data-cy=\"homepage_input_locationsearch\"]').type(_querriesZaliczenieGrygoruk.default[1].input2).wait(1000);\ncy.get('[data-cy=\"homepage_link_autosuggest\"] > :nth-child(1) > .tdnone').click();\ncy.get('[data-cy=\"homepage_button_search\"]').click();\ncy.url().should(\"contain\", _querriesZaliczenieGrygoruk.default[1].input2);\ncy.get('[data-testid=\"listing-grid\"]').should(\"contain\", _querriesZaliczenieGrygoruk.default[1].input1);",
+                  "err": {},
+                  "uuid": "5357cd65-60e5-4b2f-96d6-c75a27fa6d66",
+                  "parentUUID": "8eb4434b-42cc-4a04-9740-1f7504ef50c2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Test 2 - Search for a car manually through 'categories'",
+                  "fullTitle": "Testy automatyczne II - projekt na zaliczenie - Arkadiusz Grygoruk, podyplomowe - Tester oprogramowania 2021/2022 Website tests - OLX Test 2 - Search for a car manually through 'categories'",
+                  "timedOut": null,
+                  "duration": 20708,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "olx.disableUncaughtException();\ncy.get(':nth-child(2) > :nth-child(2) > .item > .link > .cat-icon').click();\ncy.get('#bottom5 > ul > :nth-child(1) > .link-relatedcategory > .link > span').click();\ncy.get(':nth-child(2) > .css-tw2gb3 > .css-t0lbh8 > .css-1qvyz1h').click();\ncy.get('.css-1g9b9fl').contains('span', _querriesZaliczenieGrygoruk.default[1].input1, {\n  matchCase: false\n}).click({\n  force: true\n});\ncy.url().should(\"contain\", _querriesZaliczenieGrygoruk.default[1].input1);\ncy.get('body > div:nth-child(1) > div > div > form > div:nth-child(5) > div').should(\"contain\", _querriesZaliczenieGrygoruk.default[1].input1);",
+                  "err": {},
+                  "uuid": "dd8e9931-1abb-4047-bccb-651b36326cd7",
+                  "parentUUID": "8eb4434b-42cc-4a04-9740-1f7504ef50c2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Test 3 - Checking for field validation when loging in with empty form",
+                  "fullTitle": "Testy automatyczne II - projekt na zaliczenie - Arkadiusz Grygoruk, podyplomowe - Tester oprogramowania 2021/2022 Website tests - OLX Test 3 - Checking for field validation when loging in with empty form",
+                  "timedOut": null,
+                  "duration": 57599,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "olx.disableUncaughtException();\ncy.get('#topLoginLink').click();\ncy.url().should(\"contain\", \"account\");\ncy.get('.login-page > .login-box > .login-tabs > .login-tabs__content > .active > .login-form > #loginForm > .standard-login-box > #se_userLogin').click();\nolx.getLoginEmailValidation().should(\"be.visible\");\nolx.getLoginPasswordValidation().should(\"be.visible\");",
+                  "err": {},
+                  "uuid": "b4f3e87d-3f67-47bb-b481-210fd6174c6f",
+                  "parentUUID": "8eb4434b-42cc-4a04-9740-1f7504ef50c2",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Test 4 - Checking for field validation when registering in with empty form",
+                  "fullTitle": "Testy automatyczne II - projekt na zaliczenie - Arkadiusz Grygoruk, podyplomowe - Tester oprogramowania 2021/2022 Website tests - OLX Test 4 - Checking for field validation when registering in with empty form",
+                  "timedOut": null,
+                  "duration": 18223,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "olx.disableUncaughtException();\ncy.get('#topLoginLink').click();\ncy.url().should(\"contain\", \"account\");\ncy.get('.login-page > .login-box > .login-tabs > .login-tabs__navigation > ul > :nth-child(2) > #register_tab').click().wait(1500);\ncy.get('.active > #registerForm > #button_register').should(\"be.visible\").click();\nolx.getRegisterEmailValidation().should(\"be.visible\");\nolx.getRegisterPasswordValidation().should(\"be.visible\");",
+                  "err": {},
+                  "uuid": "86559ffb-703d-42a8-b61a-daa6d0bce40c",
+                  "parentUUID": "8eb4434b-42cc-4a04-9740-1f7504ef50c2",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5357cd65-60e5-4b2f-96d6-c75a27fa6d66",
+                "dd8e9931-1abb-4047-bccb-651b36326cd7",
+                "b4f3e87d-3f67-47bb-b481-210fd6174c6f",
+                "86559ffb-703d-42a8-b61a-daa6d0bce40c"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 114049,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "isoDateTime",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
